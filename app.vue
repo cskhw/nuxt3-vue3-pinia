@@ -7,6 +7,7 @@
     <button @click="check">check</button>
     <button @click="getCount">getCount</button>
   </div>
+  <nuxt-link to="/about">About</nuxt-link>
   <div>
     <h1>pinia subscribe example</h1>
     <p>{{ counterStore.$state }}</p>
@@ -15,26 +16,28 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
-import useCounterStore from '@/stores/counter'
+import { defineComponent } from "vue";
+import useCounterStore from "@/stores/counter";
 
 export default defineComponent({
+  components: {},
   setup() {
-    const counterStore = useCounterStore()
+    const counterStore = useCounterStore();
     const increAction = () => counterStore.counter++;
-    const increPatch = () => counterStore.$patch({ counter: counterStore.counter + 1 })
+    const increPatch = () =>
+      counterStore.$patch({ counter: counterStore.counter + 1 });
     const check = () => console.log(counterStore.counter);
     const getCount = () => counterStore.getCounter;
     counterStore.$subscribe((mutation, state) => {
-      console.log(state)
-    })
+      console.log(state);
+    });
     return { counterStore, check, increAction, getCount, increPatch };
   },
-})
+});
 </script>
 <style lang="scss">
-@import './assets/design';
-button + button{
+@import "./assets/design";
+button + button {
   margin-left: 1vw;
 }
 </style>
