@@ -1,16 +1,15 @@
 <template>
-  <div class="about">
+  <div class="About">
     <h4>About Page</h4>
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+
 export default defineComponent({
-  name: "about",
-  setup() {
-    return {};
-  },
+  name: "About",
+  setup() {},
 });
 </script>
 

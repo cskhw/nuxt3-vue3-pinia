@@ -43,7 +43,7 @@ body {
 }
 section {
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, auto));
+  grid-template-columns: repeat(2, minmax(100px, 1080px));
   grid-gap: 3vw;
   padding: 3vw;
 }

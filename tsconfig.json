@@ -1,10 +1,4 @@
 {
   // https://v3.nuxtjs.org/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "outDir": "./out-tsc/app",
-    "esModuleInterop": true, // 'require'와 'import' 호환
-    "types": ["node"]
-  },
-  "include": ["./*.ts"] // 사용할 폴더 및 파일
+  "extends": "./.nuxt/tsconfig.json"
 }

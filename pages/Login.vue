@@ -2,7 +2,6 @@
   <div class="login">
     <input type="text" />
     <input type="text" />
-
     <button @click="onClick"></button>
   </div>
 </template>

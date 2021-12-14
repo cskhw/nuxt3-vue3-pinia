@@ -1,13 +1,25 @@
 <template>
-  <div class="login">Login Page</div>
+  <div class="login">
+    <input type="text" />
+    <input type="text" />
+    <button @click="onClick"></button>
+  </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+
 export default defineComponent({
-  name: "login",
-  setup() {
-    return {};
+  name: "Login",
+  components: {},
+  props: {
+    onClick: {
+      type: Function,
+      required: true,
+    },
+  },
+  setup(props) {
+    return { props };
   },
 });
 </script>

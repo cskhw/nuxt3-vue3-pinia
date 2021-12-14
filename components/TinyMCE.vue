@@ -1,15 +1,40 @@
 <template>
   <div class="tinymce">
     <h4>TinyMCE Page</h4>
+    <editor :initialValue="text"></editor>
+    <span>{{ text }}</span>
+    <input type="text" @input="inputText" />
+    <button @click="onClick(text)">insert</button>
+    <button @click="check">check</button>
   </div>
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
+import Editor from "@tinymce/tinymce-vue";
+import useTinyStore from "@/stores/tiny";
+import useTodoStore from "~~/stores/todos";
+
 export default defineComponent({
   name: "TinyMCE",
-  components: {},
-  setup() {},
+  components: { Editor },
+  setup() {
+    const todoStore = useTodoStore();
+    const tinyStore = useTinyStore();
+    const text = ref("fdsa");
+    const inputText = (e) => {
+      text.value = e.target.value;
+      tinyStore.content = e.target.value;
+    };
+
+    const onClick = (inputContent) => {
+      console.log("onClick");
+      tinyStore.changeText(inputContent);
+      console.log(content.value);
+    };
+    const check = () => console.log(tinyStore.content);
+    return { text, onClick, check, todoStore, inputText };
+  },
 });
 </script>
 

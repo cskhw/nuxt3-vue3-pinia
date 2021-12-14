@@ -1,11 +1,14 @@
 <template>
-  <div class="board">Board Page</div>
+  <div class="board">
+    <NuxtLink to="/">Home</NuxtLink>
+    Board Page
+  </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
 export default defineComponent({
-  name: "board",
+  name: "Board",
   setup() {
     return {};
   },

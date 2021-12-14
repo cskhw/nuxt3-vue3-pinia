@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.1.6",
-    "@tinymce/tinymce-vue": "^4",
+    "@tinymce/tinymce-vue": "^4.0.5",
     "dart-sass": "^1.25.0",
     "pinia": "^2.0.6",
     "prettier": "^2.5.1",
