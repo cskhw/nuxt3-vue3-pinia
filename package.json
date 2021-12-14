@@ -12,7 +12,6 @@
     "@pinia/nuxt": "^0.1.6",
     "@tinymce/tinymce-vue": "^4",
     "dart-sass": "^1.25.0",
-    "fs": "^0.0.1-security",
     "pinia": "^2.0.6",
     "prettier": "^2.5.1",
     "sass": "^1.44.0",
