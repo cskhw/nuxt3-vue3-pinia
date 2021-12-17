@@ -6,6 +6,7 @@
     <input type="text" @input="inputText" />
     <button @click="onClick(text)">insert</button>
     <button @click="check">check</button>
+
   </div>
 </template>
 
@@ -21,7 +22,7 @@ export default defineComponent({
   setup() {
     const todoStore = useTodoStore();
     const tinyStore = useTinyStore();
-    const text = ref("fdsa");
+    const text = ref("aaa");
     const inputText = (e) => {
       text.value = e.target.value;
       tinyStore.content = e.target.value;

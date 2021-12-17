@@ -11,6 +11,7 @@
       <button @click="getTodos">todos 가져오기</button><br /><br />
       {{ todoStore.todos }}
     </div>
+    <v-btn class="ml-16">fdsa</v-btn>
     <section>
       <TodoList></TodoList>
       <TinyMCE></TinyMCE>
@@ -46,6 +47,9 @@ section {
   grid-template-columns: repeat(2, minmax(100px, 1080px));
   grid-gap: 3vw;
   padding: 3vw;
+}
+v-btn{
+  margin-left: 10px;
 }
 nav {
   background-color: black;
